@@ -5,6 +5,7 @@ html
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
     //- Stylesheets
+    link(rel="stylesheet", href="/assets/bower/normalize.css/normalize.css")
     link(rel="stylesheet", href="/assets/css/main.css")
 
     //- Javascripts
@@ -12,15 +13,13 @@ html
 
     //- Polymer components
     link(rel="import" href="/assets/bower/core-elements/core-elements.html")
-    link(rel="import" href="/assets/bower/paper-button/paper-button.html")
-  body
-    core-scaffold
-      core-header-panel(navigation flex mode="seamed")
-        core-toolbar Dienynas
-        core-menu(theme="core-light-theme")
-          core-item(icon="settings" label="item1")
-          core-item(icon="settings" label="item2")
+    link(rel="import" href="/assets/bower/paper-elements/paper-elements.html")
 
-      div(tool) Main page
-      div
-        != yield
+  body
+    core-drawer-panel
+      div(drawer)
+        != partial("_sidebar")
+
+      div(main)
+        div
+          != yield

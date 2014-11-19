@@ -1,0 +1,13 @@
+core-drawer-panel [drawer] {
+  background-color: #5677fc;
+  color: white;
+}
+
+paper-item core-icon {
+  margin-right: 0.5em;
+}
+
+paper-item.main {
+  font-size: 125%;
+  font-weight: bold;
+}

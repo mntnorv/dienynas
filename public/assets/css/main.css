@@ -7,6 +7,10 @@ core-drawer-panel [main] {
   padding: 10px;
 }
 
+paper-input {
+  display: block;
+}
+
 paper-item core-icon {
   margin-right: 0.5em;
 }
@@ -14,4 +18,13 @@ paper-item core-icon {
 paper-item.main {
   font-size: 125%;
   font-weight: bold;
+}
+
+paper-button.default {
+  background-color: #5677fc;
+  color: white;
+}
+
+.form-actions {
+  margin-top: 30px;
 }

@@ -3,6 +3,10 @@ core-drawer-panel [drawer] {
   color: white;
 }
 
+core-drawer-panel [main] {
+  padding: 10px;
+}
+
 paper-item core-icon {
   margin-right: 0.5em;
 }

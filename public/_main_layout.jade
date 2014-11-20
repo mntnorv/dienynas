@@ -17,4 +17,7 @@ html
     block head
 
   body(fullbleed)
-    block content
+    != partial("_navbar")
+
+    .container
+      block content

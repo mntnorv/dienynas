@@ -1,0 +1,21 @@
+.container-small {
+  width: auto;
+  margin: 10px;
+
+  @media (min-width: 768px) {
+    width: 500px;
+    margin: 10px auto;
+  }
+}
+
+.navbar-inverse {
+  background-color: #5677fc;
+
+  .navbar-brand {
+    color: #eee;
+  }
+
+  .navbar-nav > li > a {
+    color: #eee;
+  }
+}

@@ -1,9 +1,4 @@
 extends _main_layout
 
 block content
-  core-drawer-panel
-    paper-shadow(drawer z="2")
-      != partial("_sidebar")
-
-    div(main)
-      != yield
+  != yield

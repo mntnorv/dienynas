@@ -4,6 +4,12 @@ block head
   link(rel="stylesheet", href="/assets/css/login.css")
 
 block content
-  div.full-height(horizontal layout center center-justified)
-    paper-shadow.login-container
-      != yield
+  .container-small
+    h1 Dienynas.lt
+    
+    .panel.panel-default
+      .panel-heading
+        h3.panel-title= title
+
+      .panel-body
+        != yield

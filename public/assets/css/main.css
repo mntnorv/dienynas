@@ -1,35 +1,11 @@
-core-drawer-panel [drawer] {
-  background-color: #5677fc;
-  color: white;
+.container-small {
+  width: auto;
+  margin: 10px;
 }
 
-paper-input {
-  display: block;
-}
-
-paper-item core-icon {
-  margin-right: 0.5em;
-}
-
-paper-item.main {
-  font-size: 125%;
-  font-weight: bold;
-}
-
-paper-button.default {
-  background-color: #5677fc;
-  color: white;
-}
-
-paper-item a {
-  text-decoration: none;
-  color: white;
-}
-
-.full-height {
-  height: 100%;
-}
-
-.form-actions {
-  margin-top: 30px;
+@media (min-width: 768px) {
+  .container-small {
+    width: 500px;
+    margin: 10px auto;
+  }
 }

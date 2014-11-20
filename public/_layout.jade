@@ -1,4 +1,11 @@
 extends _main_layout
 
 block content
-  != yield
+  .sidebar
+    .sidebar-item.active
+      i.fa.fa-plus.sidebar-icon
+      | Testas
+    .sidebar-item Testas 2
+
+  .content
+    != yield

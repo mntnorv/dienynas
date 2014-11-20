@@ -1,3 +1,40 @@
+$sidebar-width: 250px;
+
+body {
+  margin-top: 50px;
+}
+
+.sidebar {
+  position: absolute;
+  top: 50px;
+  bottom: 0px;
+  width: $sidebar-width;
+  background-color: #444;
+  color: #eee;
+}
+
+.sidebar-item {
+  line-height: 30px;
+  vertical-align: middle;
+  padding: 10px 20px;
+
+  &:hover {
+    background-color: #333;
+  }
+
+  &.active {
+    color: white;
+  }
+}
+
+.sidebar-icon {
+  margin-right: 10px;
+}
+
+.content {
+  margin-left: $sidebar-width;
+}
+
 .container-small {
   width: auto;
   margin: 10px;

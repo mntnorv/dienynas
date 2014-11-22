@@ -1,0 +1,30 @@
+h1
+  span Dalykai
+  span.pull-right
+    a.btn.btn-success(href="new")
+      i.fa.fa-plus
+      span  Pridėti dalyką
+
+
+table.table.table-hover
+  thead
+    tr
+      th Pavadinimas
+      th Dėstomas klasėms
+      th Aprašymas
+      th Veiksmai
+
+  tbody
+    each subject in subjects
+      tr
+        td= subject.title
+        td= subject.grades.from + '-' + subject.grades.to
+        td= subject.description
+        td
+          a.btn.btn-xs.btn-success(href="edit")
+            i.fa.fa-pencil
+
+          | &nbsp;
+
+          a.btn.btn-xs.btn-danger
+            i.fa.fa-trash-o

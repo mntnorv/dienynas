@@ -15,12 +15,13 @@ input.grade {
   @include grade-focused;
 }
 
-.grade-note.empty {
-  color: transparent;
-}
-
 .grade-note {
   color: #e51c23;
+
+  &.empty {
+    color: transparent;
+    cursor: pointer;
+  }
 
   &.active {
     color: #ccc;

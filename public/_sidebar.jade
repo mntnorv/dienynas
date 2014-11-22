@@ -16,7 +16,7 @@
 - }
 
 .sidebar
-  a.sidebar-item(href="/manage/grades" class=active_for(['manage', 'grades']))
+  a.sidebar-item(href="/grades" class=active_for(['grades', 'index']))
     i.fa.fa-fw.fa-trophy.sidebar-icon
     | Pažymiai
 
@@ -24,7 +24,7 @@
     i.fa.fa-fw.fa-university.sidebar-icon
     | Pamokos
 
-  .sidebar-item
+  a.sidebar-item(href="/subjects" class=active_for(['subjects', 'index']))
     i.fa.fa-fw.fa-graduation-cap.sidebar-icon
     | Dalykai
 

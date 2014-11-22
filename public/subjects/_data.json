@@ -1,0 +1,50 @@
+{
+  "index": {
+    "subjects": [
+      {
+        "title": "Matematika",
+        "description": "Matematika",
+        "grades": {
+          "from": 1,
+          "to": 12
+        }
+      },
+      {
+        "title": "Lietuvių kalba",
+        "description": "Lietuvių kalba",
+        "grades": {
+          "from": 1,
+          "to": 12
+        }
+      },
+      {
+        "title": "Fizika",
+        "description": "Fizika",
+        "grades": {
+          "from": 6,
+          "to": 12
+        }
+      }
+    ]
+  },
+  "new": {
+    "subject": {
+      "title": "",
+      "description": "",
+      "grades": {
+        "from": 1,
+        "to": 12
+      }
+    }
+  },
+  "edit": {
+    "subject": {
+      "title": "Matematika",
+      "description": "Matematika",
+      "grades": {
+        "from": 1,
+        "to": 12
+      }
+    }
+  }
+}

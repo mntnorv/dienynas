@@ -1,0 +1,56 @@
+h1 Pažymiai
+
+.row
+  .form-group.col-sm-4
+    label(for="form-select") Klasė
+    select.form-control#form-select
+      - for (var i = 0; i < 12; i++)
+        each form_letter in ['A', 'B', 'C']
+          option= (i + 1) + form_letter
+
+  .form-group.col-sm-4
+    label(for="form-select") Dalykas
+    select.form-control#form-select
+      option Lietuvių kalba
+      option Matematika
+      option Istorija
+      option Geografija
+      option Chemija
+      option Fizika
+      option Anglų kalba
+      option Rusų kalba
+      option Vokiečių kalba
+      option Kūno kultūra
+
+  .form-group.col-sm-4
+    label(for="form-select") Mėnuo
+    select.form-control#form-select
+      option Rugsėjis
+      option Spalis
+      option Lapkritis
+      option Gruodis
+      option Sausis
+      option Vasaris
+      option Kovas
+      option Balandis
+      option Gegužė
+      option Birželis
+      option Liepa
+      option Rugpjūtis
+
+table.table.table-hover
+  thead
+    tr
+      th
+      - for (var i = 0; i < 31; i++)
+        th= i + 1
+
+  tbody
+    each name in ['Jonas Jonaitis', 'Petras Petraitis', 'Vardenis Pavardenis']
+      tr
+        td= name
+        - for (var i = 0; i < 31; i++)
+          if Math.random() >= 0.8
+            td= Math.floor((Math.random() * 6) + 4)
+          else
+            td

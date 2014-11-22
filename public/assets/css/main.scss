@@ -13,6 +13,10 @@ body {
   color: #eee;
 }
 
+.content {
+  padding: 10px 30px;
+}
+
 .sidebar-item {
   line-height: 30px;
   vertical-align: middle;
@@ -26,6 +30,7 @@ body {
 
 a.sidebar-item {
   display: block;
+  color: #eee;
 
   &:hover {
     text-decoration: none;

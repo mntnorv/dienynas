@@ -1,5 +1,13 @@
+- function active_for(page) {
+-   if(current.source == page) {
+-     return 'active';
+-   } else {
+-     return '';
+-   }
+- }
+
 .sidebar
-  a.sidebar-item.active(href="#")
+  a.sidebar-item(href="/manage/grades" class="#{ active_for('grades') }")
     i.fa.fa-fw.fa-trophy.sidebar-icon
     | Pažymiai
 

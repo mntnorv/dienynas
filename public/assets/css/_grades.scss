@@ -1,0 +1,12 @@
+input.grade {
+  width: 20px;
+  border: none;
+  background-color: transparent;
+  text-align: right;
+
+  &:focus {
+    outline: none;
+    border-bottom: 1px solid $brand-color;
+    margin-bottom: -1px;
+  }
+}

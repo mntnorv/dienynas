@@ -1,5 +1,14 @@
-- function active_for(page) {
--   if(current.source == page) {
+- function arraysIdentical(a, b) {
+-   var i = a.length;
+-   if (i != b.length) return false;
+-   while (i--) {
+-     if (a[i] !== b[i]) return false;
+-   }
+-   return true;
+- }
+
+- function active_for(path) {
+-   if(arraysIdentical(current.path, path)) {
 -     return 'active';
 -   } else {
 -     return '';
@@ -7,7 +16,7 @@
 - }
 
 .sidebar
-  a.sidebar-item(href="/manage/grades" class="#{ active_for('grades') }")
+  a.sidebar-item(href="/manage/grades" class=active_for(['manage', 'grades']))
     i.fa.fa-fw.fa-trophy.sidebar-icon
     | Pažymiai
 
@@ -27,6 +36,6 @@
     i.fa.fa-fw.fa-users.sidebar-icon
     | Vartotojai
 
-  .sidebar-item
+  a.sidebar-item(href="/forum/" class=active_for(['forum', 'index']))
     i.fa.fa-fw.fa-comments.sidebar-icon
     | Forumas

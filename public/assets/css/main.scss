@@ -1,4 +1,8 @@
 $sidebar-width: 250px;
+$brand-color: #5677fc;
+
+@import 'grades';
+@import 'forum';
 
 body {
   margin-top: 50px;
@@ -56,7 +60,7 @@ a.sidebar-item {
 }
 
 .navbar-inverse {
-  background-color: #5677fc;
+  background-color: $brand-color;
 
   .navbar-brand {
     color: #eee;
@@ -65,10 +69,4 @@ a.sidebar-item {
   .navbar-nav > li > a {
     color: #eee;
   }
-}
-
-input.grade {
-  width: 20px;
-  border: none;
-  background-color: transparent;
 }

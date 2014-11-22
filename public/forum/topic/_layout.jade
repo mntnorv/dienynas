@@ -1,0 +1,34 @@
+extends ../../_main_layout
+
+block body
+  != partial("../../_navbar")
+  != partial("../../_sidebar")
+
+  - var current_topic = public.forum._data.topics[current.source]
+
+  .content
+    h1
+      a(href="/forum") Forumas
+      = ' > '
+      span= current_topic.title
+
+    each post in current_topic.posts
+      .panel.panel-default
+        .panel-body
+          .row
+            .col-sm-1.post-info
+              div
+                strong= post.posted_by
+              div= post.posted_at
+
+            .col-sm-11
+              = post.message
+    
+    form.form-horizontal
+      .form-group
+        label.col-sm-1.control-label(for="new-message") Atsakyti:
+        .col-sm-11
+          .input-group
+            input.form-control#new-message(placeholder="Žinutė")
+            span.input-group-btn
+              button.btn.btn-primary Atsakyti

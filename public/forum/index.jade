@@ -1,0 +1,21 @@
+h1 Forumas
+
+table.table
+  thead
+    tr
+      th Temos pavadinimas
+      th Autorius
+      th Žinučių
+      th Peržiūrų
+      th Paskutinė žinutė
+
+  tbody
+    each topic, key in public.forum._data.topics
+      tr
+        - var lastPost = topic.posts[topic.posts.length - 1]
+        td
+          a(href="/forum/topic/#{key}")= topic.title
+        td= topic.created_by
+        td= topic.posts.length
+        td= topic.views
+        td= lastPost.posted_at + ', ' + lastPost.posted_by

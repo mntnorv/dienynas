@@ -1,0 +1,38 @@
+h1
+  span Pamokos
+  span.pull-right
+    a.btn.btn-success.pull-right(href="new")
+      i.fa.fa-plus
+      span  Pridėti pamoką
+
+.row
+  .col-sm-4
+    label(for="subject-select") Dalykas
+    select.form-control#subject-select
+      each subject in public.lessons._data.subjects
+        option= subject
+
+table.table.table-hover
+  thead
+    tr
+      th Klasė
+      th Savaitės diena
+      th Laikas
+      th Trukmė
+      th Veiksmai
+
+  tbody
+    each lesson in lessons
+      tr
+        td= lesson.form
+        td= public.lessons._data.weekdays[lesson.weekday]
+        td= lesson.time
+        td= lesson.duration + ' min.'
+        td
+          a.btn.btn-xs.btn-success(href="edit")
+            i.fa.fa-pencil
+
+          | &nbsp;
+
+          a.btn.btn-xs.btn-danger
+            i.fa.fa-trash-o

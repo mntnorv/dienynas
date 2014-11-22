@@ -1,0 +1,31 @@
+form.form
+  .form-group
+    label.control-label(for="lesson-subject") Dalykas
+    select.form-control#lesson-subject
+      each subject in public.lessons._data.subjects
+        option(selected=(lesson.subject == subject))= subject
+
+  .form-group
+    label.control-label(for="lesson-form") Klasė
+    select.form-control#lesson-form
+      - for (var i = 0; i < 12; i++)
+        each form_letter in ['A', 'B', 'C']
+          - var form = (i + 1) + form_letter
+          option(selected=(lesson.form == form))= form
+
+  .form-group
+    label.control-label(for="lesson-weekday") Savaitės diena
+    select.form-control#lesson-weekday
+      - for (var i = 0; i < 7; i++)
+        option(selected=(lesson.weekday == i))= public.lessons._data.weekdays[i]
+
+  .form-group
+    label.control-label(for="lesson-time") Laikas
+    input.form-control#lesson-time(placeholder="8:00" value=lesson.time)
+
+  .form-group
+    label.control-label(for="lesson-duration") Trukmė (min.)
+    input.form-control#lesson-duration(placeholder="45" value=lesson.duration)
+
+  .form-group
+    a.btn.btn-primary(href="/lessons") Išsaugoti

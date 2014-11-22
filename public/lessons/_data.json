@@ -1,0 +1,66 @@
+{
+  "weekdays": [
+    "Pirmadienis",
+    "Antradienis",
+    "Trečiadienis",
+    "Ketvirtadienis",
+    "Penktadienis",
+    "Šeštadienis",
+    "Sekmadienis"
+  ],
+  "subjects": [
+    "Lietuvių kalba",
+    "Matematika",
+    "Istorija",
+    "Geografija",
+    "Chemija",
+    "Fizika",
+    "Anglų kalba",
+    "Rusų kalba",
+    "Vokiečių kalba",
+    "Kūno kultūra"
+  ],
+  "index": {
+    "lessons": [
+      {
+        "form": "2A",
+        "subject": "Matematika",
+        "time": "8:00",
+        "duration": "45",
+        "weekday": 1
+      },
+      {
+        "form": "2B",
+        "subject": "Matematika",
+        "time": "8:55",
+        "duration": "45",
+        "weekday": 1
+      },
+      {
+        "form": "2C",
+        "subject": "Matematika",
+        "time": "10:00",
+        "duration": "45",
+        "weekday": 1
+      }
+    ]
+  },
+  "new": {
+    "lesson": {
+      "form": "1A",
+      "subject": "",
+      "time": "",
+      "duration": "",
+      "weekday": 0
+    }
+  },
+  "edit": {
+    "lesson": {
+      "form": "2A",
+      "subject": "Matematika",
+      "time": "8:45",
+      "duration": "45",
+      "weekday": 1
+    }
+  }
+}

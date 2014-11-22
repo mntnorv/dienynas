@@ -14,13 +14,13 @@ form.form
       label.control-label(for="subject-grade-from") Nuo
       select.form-control#subject-grade-from
         - for (var i = 0; i < 12; i++)
-          option(value=(i + 1) selected=(subject.grades.from == i + 1))= i + 1
+          option(selected=(subject.grades.from == i + 1))= i + 1
 
     .form-group.col-sm-6
       label.control-label(for="subject-grade-to") Iki
       select.form-control#subject-grade-to(value=subject.grades.to)
         - for (var i = 0; i < 12; i++)
-          option(value=(i + 1) selected=(subject.grades.to == i + 1))= i + 1
+          option(selected=(subject.grades.to == i + 1))= i + 1
 
   .form-group
     a.btn.btn-primary(href="/subjects") Išsaugoti

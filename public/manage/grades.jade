@@ -1,3 +1,7 @@
+- function tabindex(names, current_name, current_day) {
+-   return (names * current_day) + current_name + 1
+- }
+
 h1 Pažymiai
 
 .row
@@ -46,11 +50,13 @@ table.table.table-hover
         th= i + 1
 
   tbody
-    each name in ['Jonas Jonaitis', 'Petras Petraitis', 'Vardenis Pavardenis']
+    - var names = ['Jonas Jonaitis', 'Petras Petraitis', 'Vardenis Pavardenis']
+    - for (var i = 0; i < names.length; i++)
       tr
-        td= name
-        - for (var i = 0; i < 31; i++)
-          if Math.random() >= 0.8
-            td= Math.floor((Math.random() * 6) + 4)
-          else
-            td
+        td= names[i]
+        - for (var j = 0; j < 31; j++)
+          td
+            if Math.random() >= 0.8
+              input.grade(value="#{Math.floor((Math.random() * 6) + 4)}" tabindex="#{tabindex(names.length, i, j)}")
+            else
+              input.grade(value="" tabindex="#{tabindex(names.length, i, j)}")

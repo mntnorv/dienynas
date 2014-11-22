@@ -1,0 +1,19 @@
+h1 Pridėti mokytoją
+
+form.form
+  .form-group
+    label.control-label(for="subject-title") Vardas
+    input.form-control#subject-title(placeholder="Vardas")
+
+  .form-group
+    label.control-label(for="subject-title") Pavardė
+    input.form-control#subject-title(placeholder="Pavardė")
+
+  .form-group
+    label(for="form-select") Dalykas
+    select.form-control#form-select
+      each subject in subjects
+        option= subject
+
+  .form-group
+    a.btn.btn-primary(href="/users") Išsaugoti

@@ -1,0 +1,22 @@
+table.table
+  thead
+    tr
+      th Vardas
+      th Pavardė
+      th Vaikas
+      th Veiksmas
+
+  tbody
+    each parent, key in public.users.parents._data.parents
+      tr
+        td= parent.name
+        td= parent.surname
+        td= parent.child
+        td          
+          a.btn.btn-xs.btn-success(href="./parents/edit")
+            i.fa.fa-pencil
+
+          | &nbsp;
+
+          a.btn.btn-xs.btn-danger
+            i.fa.fa-trash-o

@@ -1,0 +1,18 @@
+table.table
+  thead
+    tr
+      th Prisijungimo vardas
+      th Veiksmas
+
+  tbody
+    each admin, key in public.users.admins._data.admins
+      tr
+        td= admin.username
+        td          
+          a.btn.btn-xs.btn-success(href="./admins/edit")
+            i.fa.fa-pencil
+
+          | &nbsp;
+
+          a.btn.btn-xs.btn-danger
+            i.fa.fa-trash-o

@@ -13,19 +13,23 @@ form.form
           - var form = (i + 1) + form_letter
           option(selected=(lesson.form == form))= form
 
-  .form-group
-    label.control-label(for="lesson-weekday") Savaitės diena
-    select.form-control#lesson-weekday
-      - for (var i = 0; i < 7; i++)
-        option(selected=(lesson.weekday == i))= public.lessons._data.weekdays[i]
+  .row
+    .form-group.col-sm-4
+      label.control-label(for="lesson-weekday") Savaitės diena
+      select.form-control#lesson-weekday
+        - for (var i = 0; i < 7; i++)
+          option(selected=(lesson.weekday == i))= public.lessons._data.weekdays[i]
 
-  .form-group
-    label.control-label(for="lesson-time") Laikas
-    input.form-control#lesson-time(placeholder="8:00" value=lesson.time)
+    .form-group.col-sm-4
+      label.control-label(for="lesson-time") Laikas
+      .input-group.clockpicker(data-autoclose=true)
+        input.form-control(type="text" placeholder="8:00" value=lesson.time)
+        span.input-group-addon
+          i.fa.fa-clock-o
 
-  .form-group
-    label.control-label(for="lesson-duration") Trukmė (min.)
-    input.form-control#lesson-duration(placeholder="45" value=lesson.duration)
+    .form-group.col-sm-4
+      label.control-label(for="lesson-duration") Trukmė (min.)
+      input.form-control#lesson-duration(placeholder="45" value=lesson.duration)
 
   .form-group
     a.btn.btn-primary(href="/lessons") Išsaugoti

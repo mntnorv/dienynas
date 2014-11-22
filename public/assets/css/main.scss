@@ -18,12 +18,17 @@ body {
   vertical-align: middle;
   padding: 10px 20px;
 
-  &:hover {
+  &:hover, &.active {
     background-color: #333;
-  }
-
-  &.active {
     color: white;
+  }
+}
+
+a.sidebar-item {
+  display: block;
+
+  &:hover {
+    text-decoration: none;
   }
 }
 

@@ -46,16 +46,36 @@ table.table.table-hover
   thead
     tr
       th
-      - for (var i = 0; i < 31; i++)
-        th= i + 1
+      - for (var i = 0; i < 15; i++)
+        th.text-right= i * 2 + Math.floor((Math.random() * 2) + 1)
 
   tbody
     - var names = ['Jonas Jonaitis', 'Petras Petraitis', 'Vardenis Pavardenis']
     - for (var i = 0; i < names.length; i++)
       tr
         td= names[i]
-        - for (var j = 0; j < 31; j++)
-          td
+        - for (var j = 0; j < 15; j++)
+          td.text-right
+            if Math.random() >= 0.98
+              i.fa.fa-fw.fa-exclamation.grade-note(
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Pastaba"
+              )
+            else
+              span(
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Rašyti pastabą"
+              )
+                i.fa.fa-fw.fa-exclamation.grade-note.empty(
+                  data-container="body"
+                  data-toggle="popover"
+                  data-placement="top"
+                  data-content="<textarea class=\"form-control\" placeholder=\"Pastaba\" rows=\"5\"></textarea>"
+                  data-html=true
+                )
+
             if Math.random() >= 0.8
               input.grade(value="#{Math.floor((Math.random() * 6) + 4)}" tabindex="#{tabindex(names.length, i, j)}")
             else

@@ -1,12 +1,41 @@
-input.grade {
-  width: 20px;
-  border: none;
-  background-color: transparent;
-  text-align: right;
-
+@mixin grade-focused() {
   &:focus {
     outline: none;
     border-bottom: 1px solid $brand-color;
     margin-bottom: -1px;
+  }
+}
+
+input.grade {
+  width: 30px;
+  border: none;
+  background-color: transparent;
+  text-align: right;
+
+  @include grade-focused;
+}
+
+.grade-note.empty {
+  color: transparent;
+}
+
+.grade-note {
+  color: #e51c23;
+
+  &.active {
+    color: #ccc;
+  }
+}
+
+td:hover {
+  .grade-note.empty {
+    color: #ccc;
+  }
+
+  input.grade {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: -1px;
+
+    @include grade-focused;
   }
 }

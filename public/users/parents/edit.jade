@@ -1,0 +1,19 @@
+h1 Redaguoti tėvą
+
+form.form
+  .form-group
+    label.control-label(for="subject-title") Vardas
+    input.form-control#subject-title(placeholder="Vardas" value="Petras")
+
+  .form-group
+    label.control-label(for="subject-title") Pavardė
+    input.form-control#subject-title(placeholder="Pavardė" value="Petraitis")
+
+  .form-group
+    label(for="form-select") Vaikas
+    select.form-control#form-select
+      each child, key in public.users.children._data.children
+        option= child.name + " " + child.surname
+
+  .form-group
+    a.btn.btn-primary(href="/users") Išsaugoti

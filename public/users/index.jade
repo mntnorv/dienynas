@@ -1,0 +1,37 @@
+h1 Vartotojai
+div(role='tabpanel')
+      ul.nav.nav-tabs(role='tablist')
+        li.active(role='presentation')
+          a(href='#Children', aria-controls='home', role='tab', data-toggle='tab') Vaikai
+        li(role='presentation')
+          a(href='#Parents', aria-controls='profile', role='tab', data-toggle='tab') Tėvai
+        li(role='presentation')
+          a(href='#Teachers', aria-controls='messages', role='tab', data-toggle='tab') Mokytojai
+        li(role='presentation')
+          a(href='#Admins', aria-controls='settings', role='tab', data-toggle='tab') Administratoriai
+
+      .tab-content
+        #Children.tab-pane.active(role='tabpanel') 
+          include ./children/list.jade
+          .pull-right.add-button
+            a.btn.btn-success.pull-right(href="./children/new")
+              i.fa.fa-plus
+              span  Pridėti vaiką
+        #Parents.tab-pane(role='tabpanel')
+          include ./parents/list.jade
+          .pull-right.add-button
+            a.btn.btn-success.pull-right(href="./parents/new")
+              i.fa.fa-plus
+              span  Pridėti tėvą
+        #Teachers.tab-pane(role='tabpanel')
+          include ./teachers/list.jade
+          .pull-right.add-button
+            a.btn.btn-success.pull-right(href="./teachers/new")
+              i.fa.fa-plus
+              span  Pridėti mokytoją
+        #Admins.tab-pane(role='tabpanel')
+          include ./admins/list.jade
+          .pull-right.add-button
+            a.btn.btn-success.pull-right(href="./admins/new")
+              i.fa.fa-plus
+              span  Pridėti administratorių

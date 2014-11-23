@@ -1,0 +1,14 @@
+{
+  "children": {
+    "child_1": {
+      "name": "Petriukas",
+      "surname": "Petraitis",
+      "class": "1A"
+    },
+    "child_2": {
+      "name": "Rūtelė",
+      "surname": "Rūtytė",
+      "class": "4B"
+    }
+  }
+}

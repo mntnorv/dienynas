@@ -1,0 +1,14 @@
+{
+  "teachers": {
+    "teacher_1": {
+      "name": "Bronius",
+      "surname": "Bronislavas",
+      "subject": "Istorija"
+    },
+    "teacher_2": {
+      "name": "Nijolė",
+      "surname": "Budienė",
+      "subject": "Biologija"
+    }
+  }
+}

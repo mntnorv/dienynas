@@ -1,0 +1,22 @@
+table.table
+  thead
+    tr
+      th Vardas
+      th Pavardė
+      th Dalykas
+      th Veiksmas
+
+  tbody
+    each teacher, key in public.users.teachers._data.teachers
+      tr
+        td= teacher.name
+        td= teacher.surname
+        td= teacher.subject
+        td          
+          a.btn.btn-xs.btn-success(href="./teachers/edit")
+            i.fa.fa-pencil
+
+          | &nbsp;
+
+          a.btn.btn-xs.btn-danger
+            i.fa.fa-trash-o

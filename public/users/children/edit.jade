@@ -1,0 +1,20 @@
+h1 Redaguoti vaiką
+
+form.form
+  .form-group
+    label.control-label(for="subject-title") Vardas
+    input.form-control#subject-title(placeholder="Vardas" value="Petriukas")
+
+  .form-group
+    label.control-label(for="subject-title") Pavardė
+    input.form-control#subject-title(placeholder="Pavardė" value="Petraitis")
+
+  .form-group
+    label(for="form-select") Klasė
+    select.form-control#form-select
+      - for (var i = 0; i < 12; i++)
+        each form_letter in ['A', 'B', 'C']
+          option= (i + 1) + form_letter
+
+  .form-group
+    a.btn.btn-primary(href="/users") Išsaugoti

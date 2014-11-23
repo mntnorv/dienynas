@@ -1,0 +1,14 @@
+{
+  "parents": {
+    "parent_1": {
+      "name": "Petras",
+      "surname": "Petraitis",
+      "child": "Petriukas Petraitis"
+    },
+    "parent_2": {
+      "name": "Rūa",
+      "surname": "Rūtienė",
+      "child": "Rūtelė Rūtytė"
+    }
+  }
+}

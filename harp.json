@@ -34,6 +34,13 @@
       "Rusų kalba",
       "Vokiečių kalba",
       "Kūno kultūra"
+    ],
+    "periods": [
+      "I trimestras",
+      "II trimestras",
+      "III trimestras",
+      "I semestras",
+      "II semestras"
     ]
   }
 }

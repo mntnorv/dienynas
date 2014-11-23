@@ -16,15 +16,27 @@
 - }
 
 .sidebar
-  a.sidebar-item(href="/grades" class=active_for(['grades', 'index']))
+  a.sidebar-item.usertype(
+    href="/grades/manage"
+    class=active_for(['grades', 'manage'])
+    data-type="teacher school_admin system_admin"
+  )
     i.fa.fa-fw.fa-trophy.sidebar-icon
     | Pažymiai
 
-  a.sidebar-item(href="/lessons" class=active_for(['lessons', 'index']))
+  a.sidebar-item.usertype(
+    href="/lessons"
+    class=active_for(['lessons', 'index'])
+    data-type="teacher school_admin system_admin"
+  )
     i.fa.fa-fw.fa-university.sidebar-icon
     | Pamokos
 
-  a.sidebar-item(href="/subjects" class=active_for(['subjects', 'index']))
+  a.sidebar-item.usertype(
+    href="/subjects"
+    class=active_for(['subjects', 'index'])
+    data-type="teacher school_admin system_admin"
+  )
     i.fa.fa-fw.fa-graduation-cap.sidebar-icon
     | Dalykai
 
@@ -36,6 +48,10 @@
     i.fa.fa-fw.fa-users.sidebar-icon
     | Vartotojai
 
-  a.sidebar-item(href="/forum/" class=active_for(['forum', 'index']))
+  a.sidebar-item.usertype(
+    href="/forum/"
+    class=active_for(['forum', 'index'])
+    data-type="parent teacher school_admin system_admin"
+  )
     i.fa.fa-fw.fa-comments.sidebar-icon
     | Forumas

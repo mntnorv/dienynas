@@ -71,10 +71,18 @@ a.sidebar-item {
   }
 }
 
+.navbar-fixed-top .navbar-collapse {
+  padding-right: 20px;
+}
+
 .text-right {
   text-align: right;
 }
 
 .popover {
   z-index: 1070;
+}
+
+.usertype {
+  display: none;
 }

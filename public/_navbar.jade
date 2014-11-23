@@ -11,8 +11,25 @@ nav.navbar.navbar-inverse.navbar-fixed-top
     ul.nav.navbar-nav.navbar-right
       li.dropdown
         a.dropdown-toggle(href='#', data-toggle='dropdown')
-          | Vartotojas
+          span.usertype(data-type='student') Mokinys
+          span.usertype(data-type='parent') Tėvas
+          span.usertype(data-type='teacher') Mokytojas
+          span.usertype(data-type='school_admin') Mokyklos administratorius
+          span.usertype(data-type='system_admin') Sistemos administratorius
+
           span.caret
         ul.dropdown-menu(role='menu')
           li
-            a(href='#') Atsijungti
+            a.set-usertype(href='#' data-type='student') Mokinys
+          li
+            a.set-usertype(href='#' data-type='parent') Tėvas
+          li
+            a.set-usertype(href='#' data-type='teacher') Mokytojas
+          li
+            a.set-usertype(href='#' data-type='school_admin') Mokyklos administratorius
+          li
+            a.set-usertype(href='#' data-type='system_admin') Sistemos administratorius
+
+          li.divider
+          li
+            a(href='/login') Atsijungti

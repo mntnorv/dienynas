@@ -1,0 +1,29 @@
+h1 Ataskaitos
+.row
+  .form-group.col-sm-4
+    label(for="form-select") Klasė
+    select.form-control#form-select
+      - for (var i = 0; i < 12; i++)
+        each form_letter in ['A', 'B', 'C']
+          option= (i + 1) + form_letter
+
+  .form-group.col-sm-4
+    label(for="subject-select") Dalykas
+    select.form-control#subject-select
+      each subject in subjects
+        option= subject
+
+  .form-group.col-sm-4
+    label(for="subject-select") Periodas
+    select.form-control#subject-select
+      each period in periods
+        option= period
+.row
+  .col-md-6
+    a.btn.btn-block.btn-success.pull-right(href="attendance")
+     i.fa.fa-info
+     span  Lankomumo ataskaita
+  .col-md-6
+    a.btn.btn-block.btn-success.pull-right(href="grades")
+     i.fa.fa-info-circle
+     span  Vidurkių ataskaita

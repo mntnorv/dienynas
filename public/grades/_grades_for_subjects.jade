@@ -1,0 +1,22 @@
+table.table.table-hover
+  thead
+    tr
+      th
+      - for (var i = 0; i < 31; i++)
+        th.text-right= i + 1
+
+  tbody
+    each subject in subjects
+      tr
+        td= subject
+        - for (var i = 0; i < 31; i++)
+          td.text-right
+            if Math.random() >= 0.99
+              i.fa.fa-exclamation.grade-note(
+                data-toggle="tooltip"
+                data-placement="top"
+                title="Pastaba"
+              )
+
+            if Math.random() >= 0.8
+              span= Math.floor((Math.random() * 6) + 4)

@@ -9,7 +9,7 @@ body {
 }
 
 .sidebar {
-  position: absolute;
+  position: fixed;
   top: 50px;
   bottom: 0px;
   width: $sidebar-width;

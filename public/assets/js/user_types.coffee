@@ -7,16 +7,24 @@
 #  - system_admin
 #
 
-setUserType = (type) ->
+setUserType = (type, redirect) ->
   localStorage.setItem('usertype', type)
-  $('.usertype').hide()
-  $(".usertype[data-type~='#{type}']").show()
+
+  if redirect
+    document.location.href = redirect
+  else
+    $('.usertype').hide()
+    $(".usertype[data-type~='#{type}']").show()
 
 $ ->
   type = localStorage.getItem('usertype') or 'student'
   setUserType(type)
 
+  if window.location.pathname == '/'
+    firstItem = $('.sidebar-item:visible').first()
+    document.location.href = firstItem.attr('href')
+
   $('.set-usertype').click ->
     self = $(this)
     type = self.attr('data-type')
-    setUserType(type)
+    setUserType(type, '/')

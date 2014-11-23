@@ -13,34 +13,16 @@ h1 Pažymiai
           option= (i + 1) + form_letter
 
   .form-group.col-sm-4
-    label(for="form-select") Dalykas
-    select.form-control#form-select
-      option Lietuvių kalba
-      option Matematika
-      option Istorija
-      option Geografija
-      option Chemija
-      option Fizika
-      option Anglų kalba
-      option Rusų kalba
-      option Vokiečių kalba
-      option Kūno kultūra
+    label(for="subject-select") Dalykas
+    select.form-control#subject-select
+      each subject in subjects
+        option= subject
 
   .form-group.col-sm-4
-    label(for="form-select") Mėnuo
-    select.form-control#form-select
-      option Rugsėjis
-      option Spalis
-      option Lapkritis
-      option Gruodis
-      option Sausis
-      option Vasaris
-      option Kovas
-      option Balandis
-      option Gegužė
-      option Birželis
-      option Liepa
-      option Rugpjūtis
+    label(for="month-select") Mėnuo
+    select.form-control#month-select
+      each month in months
+        option= month
 
 table.table.table-hover
   thead
@@ -77,6 +59,9 @@ table.table.table-hover
                 )
 
             if Math.random() >= 0.8
-              input.grade(value="#{Math.floor((Math.random() * 6) + 4)}" tabindex="#{tabindex(names.length, i, j)}")
+              input.grade(
+                value="#{Math.floor((Math.random() * 6) + 4)}"
+                tabindex="#{tabindex(names.length, i, j)}"
+              )
             else
               input.grade(value="" tabindex="#{tabindex(names.length, i, j)}")

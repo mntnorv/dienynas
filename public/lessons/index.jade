@@ -9,7 +9,7 @@ h1
   .col-sm-4
     label(for="subject-select") Dalykas
     select.form-control#subject-select
-      each subject in public.lessons._data.subjects
+      each subject in subjects
         option= subject
 
 table.table.table-hover
@@ -25,7 +25,7 @@ table.table.table-hover
     each lesson in lessons
       tr
         td= lesson.form
-        td= public.lessons._data.weekdays[lesson.weekday]
+        td= weekdays[lesson.weekday]
         td= lesson.time
         td= lesson.duration + ' min.'
         td

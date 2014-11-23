@@ -25,6 +25,14 @@
     | Pažymiai
 
   a.sidebar-item.usertype(
+    href="/grades/parent"
+    class=active_for(['grades', 'parent'])
+    data-type="parent"
+  )
+    i.fa.fa-fw.fa-trophy.sidebar-icon
+    | Pažymiai
+
+  a.sidebar-item.usertype(
     href="/lessons"
     class=active_for(['lessons', 'index'])
     data-type="teacher school_admin system_admin"

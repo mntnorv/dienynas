@@ -1,25 +1,4 @@
 {
-  "weekdays": [
-    "Pirmadienis",
-    "Antradienis",
-    "Trečiadienis",
-    "Ketvirtadienis",
-    "Penktadienis",
-    "Šeštadienis",
-    "Sekmadienis"
-  ],
-  "subjects": [
-    "Lietuvių kalba",
-    "Matematika",
-    "Istorija",
-    "Geografija",
-    "Chemija",
-    "Fizika",
-    "Anglų kalba",
-    "Rusų kalba",
-    "Vokiečių kalba",
-    "Kūno kultūra"
-  ],
   "index": {
     "lessons": [
       {

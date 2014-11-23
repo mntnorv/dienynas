@@ -1,5 +1,39 @@
 {
   "globals": {
-    "name"  : "Minimal Harp Project"
+    "weekdays": [
+      "Pirmadienis",
+      "Antradienis",
+      "Trečiadienis",
+      "Ketvirtadienis",
+      "Penktadienis",
+      "Šeštadienis",
+      "Sekmadienis"
+    ],
+    "months": [
+      "Rugsėjis",
+      "Spalis",
+      "Lapkritis",
+      "Gruodis",
+      "Sausis",
+      "Vasaris",
+      "Kovas",
+      "Balandis",
+      "Gegužė",
+      "Birželis",
+      "Liepa",
+      "Rugpjūtis"
+    ],
+    "subjects": [
+      "Lietuvių kalba",
+      "Matematika",
+      "Istorija",
+      "Geografija",
+      "Chemija",
+      "Fizika",
+      "Anglų kalba",
+      "Rusų kalba",
+      "Vokiečių kalba",
+      "Kūno kultūra"
+    ]
   }
 }

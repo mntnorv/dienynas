@@ -2,7 +2,7 @@ form.form
   .form-group
     label.control-label(for="lesson-subject") Dalykas
     select.form-control#lesson-subject
-      each subject in public.lessons._data.subjects
+      each subject in subjects
         option(selected=(lesson.subject == subject))= subject
 
   .form-group
@@ -18,7 +18,7 @@ form.form
       label.control-label(for="lesson-weekday") Savaitės diena
       select.form-control#lesson-weekday
         - for (var i = 0; i < 7; i++)
-          option(selected=(lesson.weekday == i))= public.lessons._data.weekdays[i]
+          option(selected=(lesson.weekday == i))= weekdays[i]
 
     .form-group.col-sm-4
       label.control-label(for="lesson-time") Laikas

@@ -11,9 +11,32 @@ form.form
 
   .form-group
     label(for="form-select") Vaikas
-    select.form-control#form-select
+    select.form-control#form-select(multiple='multiple')
       each child, key in public.users.children._data.children
         option= child.name + " " + child.surname
 
   .form-group
     a.btn.btn-primary(href="/users") Išsaugoti
+
+script.
+  $(document).ready(function() {
+    $('select').multiselect({
+     buttonText: function(options, select) {
+                if (options.length === 0) {
+                    return 'Nepasirinkta';
+                } else {
+                     var labels = [];
+                     options.each(function() {
+                         if ($(this).attr('label') !== undefined) {
+                             labels.push($(this).attr('label'));
+                         }
+                         else {
+                             labels.push($(this).html());
+                         }
+                     });
+                     return labels.join(', ') + ' ';
+                 }
+            },
+      buttonWidth: '100%'
+    });
+  });
